@@ -1,0 +1,39 @@
+Séquençage du génome
+
+La situation au QG est stable, vous allez pouvoir avancer sur les études du génome du virus, en espérant trouver parmi son ADN des propriétés qui pourraient faciliter la création d'un antidote.
+
+Votre séquenceur commence par découper le brin d'ADN en plusieurs parties, avec un potentiel recouvrement d'un morceau à l'autre : la fin d'un morceau d'ADN peut correspondre au début du suivant.
+
+Ces petits morceaux d'ADN sont plus faciles à scanner, mais ils ont la fâcheuse tendance de se retourner, et se retrouvent ainsi scannés à l'envers.
+
+Prenons par exemple le virus suivant : ACGTTCGACAT. Le séquenceur pourrait par exemple le découper en ces trois gènes : ACGTT, GTTCGA, CAT. Remarquez que les deux premiers gènes ont un recouvrement de trois lettres (GTT).
+
+Certains gènes peuvent se retourner après le découpage mais ne changent jamais d'ordre. Le résultat de votre séquençage serait donc par exemple ACGTT, AGCTTG et TAC si les deux derniers morceaux sont scannés à l'envers.
+
+En vous basant sur un ensemble donné de morceaux d'ADN, trouvez le génome le plus court ayant pu engendrer ces morceaux.
+Données
+Entrée
+
+Ligne 1 : un entier N compris entre 1 et 10, le nombre de gènes produits par votre séquenceur.
+
+Ligne 2 : les N gènes séparés par des espaces. Chaque gène a une taille comprise entre 1 et 100 caractères
+Sortie
+
+La séquence ADN la plus courte possible ayant pu engendrer l'ensemble de gènes donné. S'il existe plusieurs réponses équivalentes, vous pouvez renvoyer n'importe laquelle d'entre elles.
+Notes
+
+Notez qu'il est ici possible d'utiliser une approche faisant appel au bruteforce (énumération exhaustive des possibilités) étant donné le faible nombre de gènes fournis, même s'il existe une solution plus élégante et performante.
+
+Une même lettre fera partie de deux gènes au maximum.
+Exemple
+
+Pour l'entrée :
+
+3
+ACGTT AGCTTG TAC
+
+La séquence la plus courte correspondant à ces trois gènes est la suivante :
+
+ACGTTCGACAT
+
+S'il existe plusieurs réponses équivalentes, vous pouvez renvoyer n'importe laquelle d'entre elles. Dans cet exemple, vous pouvez donc également renvoyer ACGTTCGATAC.

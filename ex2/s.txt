@@ -1,0 +1,32 @@
+Ouverture des vannes
+
+Après avoir repoussé la vague d'infectés aux abords de votre base, une nouvelle mission d'urgence absolue s'impose : restaurer l'alimentation en eau potable dans la base.
+
+Les canalisations d'eau sont régulées par un ensemble de vannes, et vous cherchez celle qui porte l'étiquette "ALIMENTATION". Cependant, les étiquettes ont été partiellement effacées et vous avez du mal à identifier quelle vanne actionner : par exemple, l'étiquette "EVACUATION" pourrait ressembler à "EV_C__T_ON" après l'effacement de certaines lettres.
+
+À partir de la liste des vannes présentes dans le local technique, pouvez-vous retrouver celle qui désigne l'alimentation générale ?
+Données
+Entrée
+
+Ligne 1 : un entier N représentant le nombre de vannes présentes.
+
+** N lignes suivantes** : les étiquettes des N vannes, sous forme de chaînes de caractères composées de majuscules, espaces, et de tirets bas pour les lettres effacées.
+Sortie
+
+Le numéro de vanne correspondant à "ALIMENTATION". Les vannes sont numérotées de 1 à N, dans l'ordre des étiquettes fournies en entrée. Il est garanti que la solution sera unique.
+Exemple
+
+Pour l'entrée :
+
+4
+EV_C__T_ON
+AL_M_N_____N
+AL_M_N_____N_
+A____NT__X__
+
+Ici, la deuxième étiquette est la seule qui correspond parfaitement à "ALIMENTATION" avec plusieurs lettres effacées.
+
+Votre code devra donc afficher :
+
+2
+

@@ -1,0 +1,38 @@
+The Last Dev of Us - Infection
+
+Nous sommes en l'an 2033. Vous faites partie des 0.1% de l'humanité ayant survécu à une mystérieuse maladie mortelle transmise par un champignon. Avant de mourir de l'infection, les personnes infectées passent par une phase de dissociation qui les pousse à se rapprocher d'autres humains pour propager le champignon.
+
+En tant que développeur miraculeusement rescapé, vous prenez l'initiative de mettre vos compétences au service de votre petit groupe de survivants. Il vous faudra non seulement restaurer les infrastructures essentielles de votre ville, mais vous pourrez également contribuer à des avancées sur l'analyse de la maladie en vue d'élaborer un antidote.
+
+Tout d'abord, une mission d'importance capitale vous attend : un groupe d'infectés a été repéré autour de la base et vous devez vous en débarrasser !
+
+Les malades posent un danger critique lorsqu'ils sont trop proches d'un humain non-infecté : ils sont capables de détecter une présence humaine qui se situe à strictement moins de 100 mètres.
+
+Un survivant de votre base a effectué un repérage des alentours et a relevé les coordonnées des infectés autour de votre base qui se situe aux coordonnées (0,0). Pouvez-vous déterminer combien d'infectés sont susceptibles de vous repérer ?
+Données
+Entrée
+
+Ligne 1 : un entier N compris entre 1 et 1000, le nombre d'infectés que vous avez repérés.
+
+N lignes suivantes : deux entiers X et Y (comprises entre -1000 et 1000) séparés par un espace, représentant les coordonnées de chaque infecté.
+Sortie
+
+Le nombre de mutants se trouvant à une distance strictement inférieure à 100 de votre base (0,0).
+Exemple
+
+Pour l'entrée :
+
+6
+20 23
+80 80
+-13 -50
+61 79
+60 80
+28 -96
+
+3 infectés sont trop proches de votre base : le premier, le troisième et le quatrième. Votre code doit donc afficher :
+
+3
+
+A noter que le dernier infecté est à une distance d'exactement 100 (√(28^2 + (-96)^2) = √(10,000) = 100), et donc ne doit pas être compté.
+

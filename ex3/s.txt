@@ -1,0 +1,44 @@
+Protocole d'isolation
+
+Afin de limiter la propagation de la maladie si elle était amenée à toucher votre communauté de survivants, vous souhaitez minimiser les contacts entre les personnes.
+
+Le principal lieu de présence dans votre QG est la salle commune, vous avez donc mis en place un contrôle strict des heures de présence dans celle-ci. Chaque personne s'est vue affectée une plage horaire unique, durant laquelle elle pourra aller se détendre dans cette pièce.
+
+Il y a transmission potentielle du virus à partir du moment où deux personnes passent au moins 15 minutes dans la même pièce. À partir des horaires de présence fournis, comptez le nombre de paires de survivants qui sont susceptibles de se transmettre le virus dans la salle commune.
+Données
+Entrée
+
+Ligne 1 : un entier N, le nombre de survivants ayant accès à la salle commune
+
+N lignes suivantes : une chaîne de caractères au format "hh:mm - hh:mm" représentant la plage horaire de présence d'un survivant.
+Sortie
+
+Le nombre de paires de survivants présentant un risque de contamination mutuelle.
+Exemple
+
+Pour l'entrée :
+
+4
+08:00 - 09:00
+10:15 - 11:00
+10:35 - 10:50
+10:40 - 12:00
+
+Ici, il existe deux risques de contamination :
+
+    les survivants 2 et 3 passent 15 minutes ensemble, entre 10h35 et 10h50.
+    les survivants 2 et 4 passent 20 minutes ensemble, entre 10h40 et 11h00.
+
+Toutes les autres paires de survivants passent moins de 15 minutes en même temps dans la pièce et ne représentent donc pas un risque. En particulier, les paires 3 et 4 passent du temps ensemble dans la pièce, mais moins de 15 minutes.
+
+Il existe deux paires à risque, votre code devra donc renvoyer :
+
+2
+
+Précisions
+
+Il y a au maximum 100 survivants.
+
+Les plages horaires n'incluent jamais le passage à minuit : vous n'avez donc pas à gérer les cas particuliers tels que "23:50 - 00:10".
+
+Dans chaque créneau horaire, l'heure de fin n'est pas incluse : ainsi, le créneau "10:00 - 10:30" dure précisément 30 minutes, le survivant quittera la pièce à 10:30:00 et non après 10:30:59.
